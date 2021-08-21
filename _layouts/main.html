@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+{% assign current = page.url | downcase | split: '/' %}
+
+<!-- Nav Bar Container-->
+{% include nav.html %}
+
+{% if page.home == true %}
+
+{% endif %}
+
+{% if page.url == '/about/' %}
+
+{% endif %}
+
+{% if page.url == '/recruit/' %}
+
+{% endif %}
+
+{% if page.post-header == true %}
+
+{% endif %}
+{% if page.project-header == true %}
+
+{% endif %}
+
+<main>
+  {{ content }}
+</main>
+
+{% include footer.html %}
+
+</body>
+</html>
