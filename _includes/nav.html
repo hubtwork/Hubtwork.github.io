@@ -8,28 +8,30 @@
   }
 </script>
 
-<nav class="nav">
-  <div class="nav-container">
-
-    <div class="logo">
-      <a href="{{ '' | prepend: site.baseurl }}/">
-        <img src="/meta/vscode.png">
-        <span>Hubtwork TechBlog</span>
-      </a>
-    </div>
-
-    <ul class="hide">
-      {% for menu in site.data.menu %}
-      <li class="transition">
-        <a href="/{{menu.id}}" {% if current[1]== menu.id %} class="active" {% endif%}>
-          {{ menu.label }}
+<header>
+  <nav class="nav">
+    <div class="nav-container">
+  
+      <div class="logo">
+        <a href="{{ '' | prepend: site.baseurl }}/">
+          <img src="/meta/vscode.png">
+          <span>Hubtwork TechBlog</span>
         </a>
-      </li>
-      {% endfor %}
-    </ul>
-
-    <div class="dropdown" onclick="switchMenuVisible()">
-      <div class="icon">☰</div>
+      </div>
+  
+      <ul class="hide">
+        {% for menu in site.data.menu %}
+        <li class="transition">
+          <a href="/{{menu.id}}" {% if current[1]== menu.id %} class="active" {% endif%}>
+            {{ menu.label }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+  
+      <div class="dropdown" onclick="switchMenuVisible()">
+        <div class="icon">☰</div>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>

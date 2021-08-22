@@ -1,5 +1,8 @@
 - id: about
-  label: 개발자 소개
+  label: About
 
 - id: tech
-  label: 테크노트
+  label: Tech
+
+- id: archieve
+  label: Archieve
